@@ -1,5 +1,7 @@
-Kaggle Otto Group Classification Challenge
-==========================================
+Kaggle Otto Group Classification Challenge (Top 7%)
+===================================================
+
+Result (on public LB): 0.42140.
 
 This was one of the most interesting challenges I've taken part in, for the following reasons:
 
@@ -8,13 +10,13 @@ This was one of the most interesting challenges I've taken part in, for the foll
     #. Lots of interesting ideas on the forum – I learned about Calibrated classifiers in scikit-learn, XGBoost, nolearn and Lasagne
 
 So mostly the competition was about tuning classifiers, which I never really did before, at least in such large amounts, and this has been a great experience and opportunity to learn more about various parameters of various classification methods. If only I had more knowledge about Neural Nets, I think I would've scored higher, but I kind of got stuck with them, and couldn't get the extremely low scores some other forum users were getting (0.42 or so, if I recall correctly).
-A full list of all my submits (with their scores) can be found here: https://github.com/Kunstmord/kaggle-otto/blob/master/descriptions.txt
-A companion list describing the architecture of used Neural Nets can be found here: https://github.com/Kunstmord/kaggle-otto/blob/master/CVscoresLLoss
+A full list of all my submits (with their scores) can be found here: https://github.com/knstmrd/kaggle-otto/blob/master/descriptions.txt
+A companion list describing the architecture of used Neural Nets can be found here: https://github.com/knstmrd/kaggle-otto/blob/master/CVscoresLLoss
 
 My best result was a mix of multiple models, namely, 3 averaged neural nets (each one was an average of from of 4 networks), 2 XGBoosts, 1 Gradient Boosting Classifier
 and 1 Calibrated Classifier on top of a Random Forest. The three neural networks were with quite different architectures (4 layers and 2 dropout layers; 3 layers and 2 dropout layers; 3 layers and 1 dropout layer), and each one was an average of similar-sized nets (I changed around the sizes and some learn-rate related parameters and then just took a simple average, this improved the result by 0.01 as compared to using a single neural network of each architecture type).
 
-Full description of the model can be found here: https://github.com/Kunstmord/kaggle-otto/blob/master/final.rst
+Full description of the model can be found here: https://github.com/knstmrd/kaggle-otto/blob/master/final.rst
 
 And here's a list of best results (on the public leaderboard) obtained using single models (I could've gotten better results for Random Forests, but I started wrapping them in the Calibrated Classifier and stopped trying to improve the RF by itself):
 
@@ -35,7 +37,7 @@ Code
 ====
 I wrote everything in Jupyter notebooks. Most of them are here (I did not upload some of the notebooks which are just copies of other ones with some different parameters):
 
-A basic notebook for creation of CV files that I used is this: https://github.com/Kunstmord/kaggle-otto/blob/master/basic_clf_CV.ipynb
-This is a notebook to find the optimal weights using the CV predictions: https://github.com/Kunstmord/kaggle-otto/blob/master/best-avgs-new.ipynb
-This is a notebook for a basic submission: https://github.com/Kunstmord/kaggle-otto/blob/master/basic_clf.ipynb
-This is a notebook for a submissions which is a weighted sum of other submissions: https://github.com/Kunstmord/kaggle-otto/blob/master/basic_clf-averaging.ipynb
+A basic notebook for creation of CV files that I used is this: https://github.com/knstmrd/kaggle-otto/blob/master/basic_clf_CV.ipynb
+This is a notebook to find the optimal weights using the CV predictions: https://github.com/knstmrd/kaggle-otto/blob/master/best-avgs-new.ipynb
+This is a notebook for a basic submission: https://github.com/knstmrd/kaggle-otto/blob/master/basic_clf.ipynb
+This is a notebook for a submissions which is a weighted sum of other submissions: https://github.com/knstmrd/kaggle-otto/blob/master/basic_clf-averaging.ipynb
